@@ -1,0 +1,55 @@
+{
+  "name": "taro-migrate",
+  "version": "1.0.0",
+  "description": "taro2迁移到taro3工具",
+  "main": "index.js",
+  "bin": {
+    "taro-migrate": "./bin/main"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel --config-file ./main.babel.config.json src --out-dir bin --extensions '.ts'",
+    "ts-start": "ts-node ./src/main.ts",
+    "start": "node ./bin/main.js",
+    "build-start": "npm run build && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qq865738120/taro-migrate.git"
+  },
+  "keywords": [
+    "taro3",
+    "migrate"
+  ],
+  "author": "code_xia zwj865738120@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qq865738120/taro-migrate/issues"
+  },
+  "homepage": "https://github.com/qq865738120/taro-migrate#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.14.4",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-typescript": "^7.13.0",
+    "@tarojs/cli": "^3.2.2-beta.0",
+    "@types/babel-core": "^6.25.6",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@tarojs/components": "^3.2.2-beta.0",
+    "@tarojs/mini-runner": "^3.2.2-beta.0",
+    "@tarojs/react": "^3.2.2-beta.0",
+    "@tarojs/runtime": "^3.2.2-beta.0",
+    "@tarojs/taro": "^3.2.2-beta.0",
+    "chalk": "^4.1.1",
+    "core-js": "^3.6.5",
+    "inquirer": "^8.1.0",
+    "ora": "^5.4.1",
+    "source-map": "^0.7.3"
+  }
+}
